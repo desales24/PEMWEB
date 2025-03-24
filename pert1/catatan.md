@@ -6,8 +6,7 @@ html merupakan bahasa general yang digunakan untuk develops website
 ```yaml
 version: '3'
 ```
-Bagian ini menentukan versi *Docker Compose* yang digunakan. Dalam hal ini, versi yang digunakan adalah **3**.
-
+Bagian ini menentukan versi *Docker Compose* yang digunakan. 
 ### **Definisi Layanan (Services)**
 #### **1. Layanan `web` (Nginx)**
 ```yaml
@@ -23,7 +22,7 @@ services:
     ports:
       - 80:80
 ```
-- *Mapping* **port 80 pada host** ke **port 80 dalam container**.
+- *Mapping* **port 80 pada host/os** ke **port 80 dalam container**.
 - Artinya, aplikasi dalam container dapat diakses melalui **http://localhost:80**.
 
 #### **3. Volumes**
