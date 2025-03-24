@@ -91,7 +91,7 @@ server {
    - Jika **index.html** ada, maka akan ditampilkan.
    - Jika file tidak ditemukan, Nginx akan mengembalikan **error 404**.
 
-2. Jika pengguna mengakses file lain, misalnya **`http://localhost/about.html`**:
-   - Nginx akan mengecek apakah **about.html** ada di `/usr/share/nginx/html/`.
+2. Jika pengguna mengakses file lain, misalnya **`http://localhost/index.html`**:
+   - Nginx akan mengecek apakah **index.html** ada di `/usr/share/nginx/html/`.
    - Jika ada, file akan ditampilkan.
    - Jika tidak ada, akan mengembalikan **error 404**.
