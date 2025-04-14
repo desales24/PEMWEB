@@ -59,4 +59,4 @@ HTML (**HyperText Markup Language**) adalah bahasa markup yang digunakan untuk m
 **Keamanan Web** – HTML sendiri tidak memiliki fitur keamanan, sehingga rentan terhadap serangan seperti XSS (Cross-Site Scripting) jika tidak dikombinasikan dengan teknik keamanan yang baik.  
 
 ### **Kesimpulan**  
-HTML tetap menjadi fondasi utama dalam pengembangan web, dengan kekuatan utama berupa kemudahan penggunaan dan kompatibilitas yang luas. Namun, untuk membangun aplikasi web yang canggih, HTML perlu dikombinasikan dengan teknologi lain. Perkembangan standar HTML5 dan peluang dalam industri web memastikan HTML akan tetap relevan dalam waktu yang lama. 🚀
+HTML tetap menjadi fondasi utama dalam pengembangan web, dengan kekuatan utama berupa kemudahan penggunaan dan kompatibilitas yang luas. Namun, untuk membangun aplikasi web yang canggih, HTML perlu dikombinasikan dengan teknologi lain. Perkembangan standar HTML5 dan peluang dalam industri web memastikan HTML akan tetap relevan dalam waktu yang lama.
