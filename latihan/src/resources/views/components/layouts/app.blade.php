@@ -9,8 +9,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset ('front/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset ('front/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -20,8 +20,8 @@
   <!-- Vendor CSS Files -->
   <link href="{{ asset ('front/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset ('front/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ asset ('front/vendor/aos/aos.css') }}" rel="stylesheet">
-  <link href="{{ asset ('frontvendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset ('front/vendor/aos/aos.css" rel="stylesheet') }}">
+  <link href="{{ asset ('front/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset ('front/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Main CSS File -->
@@ -41,27 +41,22 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <!-- Profile Image -->
-    <div class="profile-img text-center">
-        <img src="{{ asset('front/img/MyPhoto.jpg') }}" 
-            alt="My Photo" 
-            class="img-fluid rounded-circle"
-            style="width: 120px; height: 120px; object-fit: cover;">
-    </div>
-
-
+    <di class="profile-img">
+      <img src="{{ asset ('front/img/my-profile-img.jpg') }}" alt="" class="img-fluid rounded-circle">
+    </di>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Faiz Izaz Fathoni</h1>
+      <h1 class="sitename">Alex Smith</h1>
     </a>
 
     <div class="social-links text-center">
-      <a href="https://youtube.com/@faizizaz8520?si=UFSdLVigouBfGBwr" class="youtube"><i class="bi bi-youtube"></i></a>
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/faizaz8?igsh=bGoxdDU1MTd4ZDN1" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://github.com/mrkataktampan" class="github"><i class="bi bi-github"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -93,8 +88,6 @@
     </nav>
 
   </header>
-  
-  {{ $slot }}
 
   <footer id="footer" class="footer position-relative light-background">
 
@@ -124,7 +117,7 @@
   <!-- Vendor JS Files -->
   <script src="{{ asset ('front/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset ('front/vendor/php-email-form/validate.js') }}"></script>
-  <script src="{{ asset ('font/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset ('front/vendor/aos/aos.js') }}"></script>
   <script src="{{ asset ('front/vendor/typed.js/typed.umd.js') }}"></script>
   <script src="{{ asset ('front/vendor/purecounter/purecounter_vanilla.js') }}"></script>
   <script src="{{ asset ('front/vendor/waypoints/noframework.waypoints.js') }}"></script>
@@ -134,7 +127,7 @@
   <script src="{{ asset ('front/vendor/swiper/swiper-bundle.min.js') }}"></script>
 
   <!-- Main JS File -->
-  <script src="{{ asset ('front/js/main.js') }}"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
