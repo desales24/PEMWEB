@@ -15,7 +15,7 @@
 <body>
   <!-- Profil -->
   <div class="container mt-5 text-center">
-    <img src="../latihan/gambar/image.png" alt="Foto Profil" class="rounded-circle img-thumbnail" style="width: 150px;">
+    <img src="{{ asset ('front/images/image.png') }}" alt="Foto Profil" class="rounded-circle img-thumbnail" style="width: 150px;">
     <h2 class="mt-3">Desales</h2>
     <p class="text-muted">Teknik Informatika - Universitas Esa Unggul</p>
 
