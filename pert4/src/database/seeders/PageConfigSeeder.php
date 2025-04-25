@@ -1,16 +1,24 @@
 <?php
 
-namespace App\Models;
+namespace Database\Seeders;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\PageConfig;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
-class PageConfig extends Model
+class PageConfigSeeder extends Seeder
 {
-    //
-    use Hasfactory;
-    protected $table = 'page_configs';
-    protected $fillable = [
-        'title', 'detail', 'image'
-    ];
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        if(PageConfig::count()==0){
+            PageConfig::create([
+                'title' => 'Welcome to Our Website',
+                'detail' => 'We are glad to have you here. Explore our services and offerings.',
+                'image' => '',
+            ]);
+        } 
+    }
 }

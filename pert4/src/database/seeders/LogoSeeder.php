@@ -2,21 +2,22 @@
 
 namespace Database\Seeders;
 
-use App\Models\Product;
+use App\Models\Logo;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ProductSeeder extends Seeder
+class LogoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        if(Product::count()==0){
-            Product::create([
-                'name' => 'Sepatu',
-                'description' => 'Abidas',
+        
+
+        if(Logo::count()==0){
+            Logo::create([
+                'title' => 'PemWeb',
                 'image' => '',
             ]);
         } 

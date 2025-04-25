@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class PageConfig extends Model
+class Footer extends Model
 {
     use HasFactory;
-    protected $table = 'page_configs';
+    protected $table = 'footers';
     protected $fillable = [
-        'title',
-        'detail',
-        'image',
+        'section',
+        'url',
+        'label',
+        'order',
     ];
 }

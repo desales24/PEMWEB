@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('page_configs', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('detail');
+            $table->string('image');
             $table->timestamps();
         });
     }

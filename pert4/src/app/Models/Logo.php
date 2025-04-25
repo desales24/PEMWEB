@@ -4,15 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Testing\Fluent\Concerns\Has;
 
-class Product extends Model
+class Logo extends Model
 {
     use HasFactory;
-    protected $table = 'products';
+
+    protected $table = 'logos';
     protected $fillable = [
-        'name',
-        'description',
+        'title',
         'image',
     ];
 }

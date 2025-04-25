@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('seos', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('description');  
+            $table->string('keywords'); 
+            $table->string('cannonical_url');    
+            $table->string('robots');    
+            $table->string('og_image');    
             $table->timestamps();
         });
     }
