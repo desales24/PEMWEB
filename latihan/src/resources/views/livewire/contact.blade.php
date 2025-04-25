@@ -18,13 +18,13 @@
                                     <strong class="site-footer-title d-block mb-3">Services</strong>
 
                                     <ul class="footer-menu">
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Websites</a></li>
+                                        <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">Websites</a></li>
 
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Branding</a></li>
+                                        <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">Branding</a></li>
 
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Ecommerce</a></li>
+                                        <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">Ecommerce</a></li>
 
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">SEO</a></li>
+                                        <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">SEO</a></li>
                                     </ul>
 
                                     <strong class="site-footer-title d-block mt-4 mb-3">Stay connected</strong>

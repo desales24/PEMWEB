@@ -1,7 +1,9 @@
 @php
     use App\Models\ShowAbout;
+    use App\Models\Information;
 
     $showabout = ShowAbout::first();
+    $information = Information::first();
 @endphp
 
 <main>
@@ -17,7 +19,7 @@
                             <div class="about-thumb">
 
                                 <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                    <h2 class="text-white me-4 mb-0">My Story</h2>
+                                    <h2 class="text-white me-4 mb-0">{{$showabout->title}}</h2>
 
                                     <img src="{{ $showabout->profile_image ? asset('storage/' . $showabout->profile_image) : asset('front/images/image.jpg') }}" class="avatar-image img-fluid" alt="">
                                 </div>
@@ -51,22 +53,22 @@
                                 <div class="profile-body">
                                     <p>
                                         <span class="profile-small-title">Name</span> 
-                                        <span>Joshua Morgan</span>
+                                        <span>{{$information->name}}</span>
                                     </p>
 
                                     <p>
                                         <span class="profile-small-title">Birthday</span> 
-                                        <span>Aug 12, 1986</span>
+                                        <span>{{$information->birthday}}</span>
                                     </p>
 
                                     <p>
                                         <span class="profile-small-title">Phone</span> 
-                                         <span><a href="tel: 305-240-9671">120-240-9600</a></span>
+                                         <span><a href="tel: 305-240-9671">{{$information->phone}}</a></span>
                                     </p>
 
                                     <p>
                                         <span class="profile-small-title">Email</span> 
-                                        <span><a href="mailto:hello@josh.design">hello@josh.design</a></span>
+                                        <span><a href="mailto:hello@josh.design">{{$information->email}}</a></span>
                                     </p>
                                 </div>
                             </div>
@@ -76,25 +78,25 @@
                             <div class="about-thumb">
                                 <div class="row">
                                     <div class="col-lg-6 col-6 featured-border-bottom py-2">
-                                        <strong class="featured-numbers">20+</strong>
+                                        <strong class="featured-numbers">{{$information->description_1}}</strong>
 
                                         <p class="featured-text">Years of Experiences</p>
                                     </div>
 
                                     <div class="col-lg-6 col-6 featured-border-start featured-border-bottom ps-5 py-2">
-                                        <strong class="featured-numbers">245</strong>
+                                        <strong class="featured-numbers">{{$information->description_2}}</strong>
 
                                         <p class="featured-text">Happy Customers</p>
                                     </div>
 
                                     <div class="col-lg-6 col-6 pt-4">
-                                        <strong class="featured-numbers">640</strong>
+                                        <strong class="featured-numbers">{{$information->description_3}}</strong>
 
                                         <p class="featured-text">Project Finished</p>
                                     </div>
 
                                     <div class="col-lg-6 col-6 featured-border-start ps-5 pt-4">
-                                        <strong class="featured-numbers">72+</strong>
+                                        <strong class="featured-numbers">{{$information->description_4}}</strong>
 
                                         <p class="featured-text">Digital Awards</p>
                                     </div>
@@ -109,33 +111,26 @@
 
             <section class="clients section-padding">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <div class="row justify-content-center text-center mb-5">
+                        <div class="col-12">
+                            <h3>Menempuh Pendidikan</h3>
+                        </div>
+                    </div>
 
-                        <div class="col-lg-12 col-12">
-                            <h3 class="text-center mb-5">Companies I've had worked</h3>
+                    <div class="row justify-content-center text-center g-4">
+                        <div class="col-6 col-md-2">
+                            <img src="{{ $information->logo_1_image ? asset('storage/' . $information->logo_1_image) : asset('front/images/image.jpg') }}" class="clients-image img-fluid" alt="">
                         </div>
 
-                        <div class="col-lg-2 col-4 ms-auto clients-item-height">
-                            <img src="{{ asset ('front/images/clients/cachet.svg') }}" class="clients-image img-fluid" alt="">
+                        <div class="col-6 col-md-2">
+                            <img src="{{ $information->logo_2_image ? asset('storage/' . $information->logo_2_image) : asset('front/images/image.jpg') }}" class="clients-image img-fluid" alt="">
                         </div>
 
-                        <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="{{ asset ('front/images/clients/guitar-center.svg') }}" class="clients-image img-fluid" alt="">
+                        <div class="col-6 col-md-2">
+                            <img src="{{ $information->logo_3_image ? asset('storage/' . $information->logo_3_image) : asset('front/images/image.jpg') }}" class="clients-image img-fluid" alt="">
                         </div>
-
-                        <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="{{ asset ('front/images/clients/tokico.svg') }}" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="{{ asset ('front/images/clients/shopify.svg') }}" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-2 col-4 me-auto clients-item-height">
-                            <img src="{{ asset ('front/images/clients/profil-rejser.svg') }}" class="clients-image img-fluid" alt="">
-                        </div>
-
                     </div>
                 </div>
             </section>
+
 </main>
