@@ -16,6 +16,7 @@ class Mahasiswa extends Model
         'ipk',
         'semester',
         'penghasilan_orangtua',
+        'jurusan',
     ];
     public function beasiswa()
     {

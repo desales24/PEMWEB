@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('beasiswas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->float('ipk_min')->nullable();
             $table->text('deskripsi')->nullable();
             $table->date('tanggal_mulai');
             $table->date('tanggal_selesai');

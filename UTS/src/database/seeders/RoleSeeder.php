@@ -2,30 +2,28 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
-use App\Models\User;
 
 class RoleSeeder extends Seeder
 {
-    public function run(): void 
+    public function run()
     {
-        // Ensure roles exist
-        $mahasiswaRole = Role::firstOrCreate(['name' => 'Mahasiswa', 'guard_name' => 'web']);
-        $adminRole = Role::firstOrCreate(['name' => 'super_admin', 'guard_name' => 'web']);
-        
-        // Assign roles to specific users based on email
-        $mahasiswaUser = User::where('email', 'mhs@admin.com')->first();
-        $adminUser = User::where('email', 'admin@example.com')->first();
+        // Hanya permission yang berhubungan dengan view mahasiswa
+        $permissions = [
+            'view_mahasiswa',
+            'view_any_mahasiswa',
+        ];
 
-        if ($mahasiswaUser) {
-            $mahasiswaUser->assignRole($mahasiswaRole);
+        // Buat permission jika belum ada
+        foreach ($permissions as $permission) {
+            Role::firstOrCreate(['name' => $permission]);
         }
 
-        if ($adminUser) {
-            $adminUser->assignRole($adminRole);
-        }
+        // Buat role Mahasiswa jika belum ada
+        $role = Role::firstOrCreate(['name' => 'mahasiswa']);
+
+        // Berikan hanya permission view mahasiswa ke role Mahasiswa
+        $role->syncPermissions($permissions);
     }
 }

@@ -26,6 +26,9 @@ class BeasiswaResource extends Resource
                 Forms\Components\TextInput::make('nama')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('ipk_min')
+                    ->numeric()
+                    ->default(null),
                 Forms\Components\Textarea::make('deskripsi')
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('tanggal_mulai')
@@ -41,6 +44,9 @@ class BeasiswaResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('ipk_min')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('tanggal_mulai')
                     ->date()
                     ->sortable(),

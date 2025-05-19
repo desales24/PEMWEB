@@ -11,6 +11,7 @@ class Beasiswa extends Model
     protected $table = 'beasiswas';
     protected $fillable = [
         'nama',
+        'ipk_min',
         'deskripsi',
         'tanggal_mulai',
         'tanggal_selesai',

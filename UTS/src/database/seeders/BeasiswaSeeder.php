@@ -17,6 +17,7 @@ class BeasiswaSeeder extends Seeder
         if(Beasiswa::count()==0){
             Beasiswa::create([
                 'nama' => 'Beasiswa',
+                'ipk_min' => 3,
                 'deskripsi' => 'Beasiswa untuk mahasiswa berprestasi',
                 'tanggal_mulai' => '2025-01-01',
                 'tanggal_selesai' => '2025-12-31',

@@ -5,23 +5,21 @@ namespace Database\Seeders;
 use App\Models\Beasiswa;
 use App\Models\Pendaftaran;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
+use Database\Seeders\RoleSeeder;
+
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
-    {
-        // Call RoleSeeder first to create roles
-        $this->call([RoleSeeder::class]);
-
-        // Seed users after roles exist
-        $this->seedUsers();
-        
+    {   
         // Additional seeders
+        $this->call([RoleSeeder::class]);
         $this->call([BeasiswaSeeder::class]);
         $this->call([MahasiswaSeeder::class]);
         $this->call([PendaftaranSeeder::class]);
-        $this->call([PermissionsSeeder::class]);
+        $this->call([RolePermissionSeeder::class]);
     }
 
     private function seedUsers(): void
@@ -40,12 +38,12 @@ class DatabaseSeeder extends Seeder
         // Create Mahasiswa user if not exists
         $mhsEmail = 'mhs@admin.com';
         if (! User::where('email', $mhsEmail)->exists()) {
-            $mhs = User::create([
+            $mahasiswa = User::create([
                 'name' => 'Mahasiswa',
                 'email' => $mhsEmail,
                 'password' => bcrypt('password'),
             ]);
-            $mhs->assignRole('Mahasiswa');
+            $mahasiswa->assignRole('Mahasiswa');
         }
     }
 }
