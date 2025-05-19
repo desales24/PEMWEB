@@ -30,23 +30,25 @@
           </a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav m-auto">
+
               <li class="nav-item">
                 <a wire:navigate class="nav-link" href="{{ route('home') }}"
                   >Home</a
                 >
               </li>
+
               <li class="nav-item">
-                <a wire:navigate class="nav-link" href="{{ route('profile') }}"
-                  >Profile</a
-                >
+                <a class="nav-link" href="http://localhost/admin/login">
+                    Login</a>
               </li>
+
             </ul>
           </div>
         </div>
       </nav>
     </header>
 
-    {{ $slot }} //######## {{PENTING}} ########
+    {{ $slot }} 
     
     <footer class="section-sm bg-tertiary">
       <div class="container text-center">
