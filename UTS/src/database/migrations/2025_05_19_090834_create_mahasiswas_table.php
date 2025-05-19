@@ -19,7 +19,7 @@ return new class extends Migration
             $table->float('ipk')->nullable();
             $table->integer('semester')->nullable();
             $table->bigInteger('penghasilan_orangtua')->nullable();
-            $table->string('jurusan');
+             $table->string('jurusan');
             $table->timestamps();
         });
     }

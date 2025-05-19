@@ -21,7 +21,7 @@ class Mahasiswa extends Model
     {
         return $this->belongsTo(Beasiswa::class);
     }
-    public function pendaftarans()
+    public function pendaftaran()
     {
         return $this->hasMany(Pendaftaran::class);
     }
